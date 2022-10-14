@@ -1,5 +1,5 @@
 import "./App.css";
-import StartPage from "./Components/startPage";
+import StartPage from "./Components/StartPage";
 import Question from "./Components/Question";
 import React, { useState, useEffect } from "react";
 import Footer from "./Components/Footer";
