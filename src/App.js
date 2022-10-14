@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "./Components/Footer";
 import { nanoid } from "nanoid";
 import Dropdown from "./Components/Dropdown.js";
-
+//s
 function App() {
   const [started, setStarted] = useState(false);
   const [finished, setFinished] = useState(false);
