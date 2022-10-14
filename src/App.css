@@ -105,23 +105,6 @@ button {
   margin-left: 0;
 }
 
-.answer--button--end {
-  min-width: 90px;
-  min-height: 27px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14.24px;
-  line-height: 12px;
-  color: #293264;
-  background: #01f95c;
-  border-radius: 7.94239px;
-  /* margin-right: 10px; */
-  margin: 7px 15px;
-  margin-left: 0;
-  margin-right: 20;
-}
-
 .footer {
   display: flex;
   margin-top: 50px;
@@ -153,11 +136,19 @@ button {
   margin-bottom: 30px;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 480px) {
   main {
     margin: auto;
     width: 450px;
 
     /* background-color: #4d5b9e; */
+  }
+  .question {
+    font-size: calc(15px + 0.390625vw);
+  }
+
+  .answer--button {
+    font-size: calc(12px + 0.390625vw);
+    min-width: 60px;
   }
 }
