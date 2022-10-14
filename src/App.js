@@ -15,10 +15,11 @@ function App() {
   const [refreshData, setRefreshData] = useState(false);
   const [difficulty, setDifficulty] = useState("");
   const [category, setCategory] = useState("");
-
+  const [dataReady, setDataReady] = useState(false);
   // Get and setting data
   useEffect(() => {
     async function fetchData() {
+      setDataReady(false);
       const res = await fetch(
         `https://opentdb.com/api.php?amount=50&${
           (getDifficulty(), getCategory())
@@ -38,6 +39,7 @@ function App() {
           };
         })
       );
+      setDataReady(true);
     }
     fetchData();
   }, [refreshData, difficulty, category]);
@@ -156,7 +158,6 @@ function App() {
             />
 
             <Dropdown
-              className="dropdown"
               variable="Category"
               values={[
                 "Any",
@@ -173,7 +174,12 @@ function App() {
               setVariable={(value) => setCategory(value)}
             />
           </div>
-          <button onClick={() => setStarted(true)} className="blue--button">
+
+          <button
+            onClick={() => setStarted(true)}
+            className="blue--button"
+            disabled={!dataReady}
+          >
             Start quiz
           </button>
         </div>
