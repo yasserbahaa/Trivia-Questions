@@ -16,6 +16,7 @@ function App() {
   const [difficulty, setDifficulty] = useState("");
   const [category, setCategory] = useState("");
   const [dataReady, setDataReady] = useState(false);
+
   // Get and setting data
   useEffect(() => {
     async function fetchData() {
