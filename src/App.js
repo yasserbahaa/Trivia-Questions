@@ -10,12 +10,12 @@ function App() {
   const [started, setStarted] = useState(false);
   const [finished, setFinished] = useState(false);
   const [questions, setQuestions] = useState([]);
-  const [numberOfCorrect, setNumberOfCorrect] = useState(0);
   const [allQuestions, setAllQuestions] = useState([]);
+  const [dataReady, setDataReady] = useState(false);
+  const [numberOfCorrect, setNumberOfCorrect] = useState(0);
   const [refreshData, setRefreshData] = useState(false);
   const [difficulty, setDifficulty] = useState("");
   const [category, setCategory] = useState("");
-  const [dataReady, setDataReady] = useState(false);
 
   // Get and setting data
   useEffect(() => {

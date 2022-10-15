@@ -1,3 +1,4 @@
+import { yellow } from "@mui/material/colors";
 import React, { useState, useEffect } from "react";
 
 export default function (props) {
@@ -7,6 +8,8 @@ export default function (props) {
       return { backgroundColor: "#94D7A2" };
     else if (props.finished && props.clicked && !props.isCorrect)
       return { backgroundColor: "#F8BCBC" };
+    else if (props.finished && !props.clicked && props.isCorrect)
+      return { backgroundColor: "orange" };
   };
 
   return (
